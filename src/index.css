@@ -47,7 +47,7 @@ span {
 }
 
 li span {
-  vertical-align: middle;
+  /* vertical-align: middle; */
   font-size: 18px;
 }
 

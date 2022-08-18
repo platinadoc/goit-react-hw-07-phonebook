@@ -6,7 +6,7 @@ import { contactsAfterFilter } from 'redux/contacts/contactsSelector';
 
 const ContactList = () => {
   const contacts = useSelector(contactsAfterFilter);
-
+  console.log(contacts);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const ContactList = () => {
       {contacts.map(el => (
         <li key={el.id} className={s.item}>
           <p className={s.text}>
-            {el.name}: <span className={s.num}>{el.number}</span>
+            {el.name}: <span className={s.num}>{el.phone}</span>
           </p>
           <button type="button" className={s.btn} onClick={() => dispatch(removeContacts(el.id))}>
             x
